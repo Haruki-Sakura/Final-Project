@@ -1,9 +1,11 @@
 package com.example.finalproject;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -71,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
         // Handle item click in product list
         productList.setOnItemClickListener((parent, view, position, id) -> {
             // Handle item click if needed
+        });
+
+        // ImageButton to redirect to signup page
+        ImageButton signUpButton = findViewById(R.id.btnUser);
+        signUpButton.setOnClickListener(v -> {
+            // Start SignUpActivity
+            Intent intent = new Intent(MainActivity.this, SignUp.class);
+            startActivity(intent);
         });
     }
 }
