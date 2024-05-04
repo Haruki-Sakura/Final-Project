@@ -24,7 +24,8 @@
             android:layout_height="40dp"
             android:layout_gravity="right"
             android:backgroundTint="@color/white"
-            app:srcCompat="@drawable/user_icon_cyan1_50x50" />
+            app:srcCompat="@drawable/user_icon_cyan1_50x50"
+            tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
     <LinearLayout
