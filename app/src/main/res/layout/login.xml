@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="145dp"
         android:orientation="vertical"
@@ -16,22 +15,22 @@
         tools:layout_editor_absoluteX="1dp">
 
         <TextView
-            android:id="@+id/signUp"
+            android:id="@+id/welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Sigh up"
+            android:text="Welcome!"
             android:textSize="40sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/createANewAccount"
+            android:id="@+id/txtLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:textSize="20sp"
-            android:text="Create a new account"
+            android:text="please log in or sign up to continue our app"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 
@@ -42,7 +41,7 @@
         tools:ignore="SmallSp" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/mainContent"
         android:layout_width="match_parent"
         android:layout_height="578dp"
         android:orientation="vertical"
@@ -84,29 +83,13 @@
             android:ems="10"
             android:inputType="textPassword" />
 
-        <TextView
-            android:id="@+id/confirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Confirm password"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
-
-        <EditText
-            android:id="@+id/confirmPasswordHolder"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
-
         <Button
-            android:id="@+id/btnSignUp1"
+            android:id="@+id/btnLogin1"
             android:layout_width="match_parent"
-            android:layout_height="65sp"
+            android:layout_height="65dp"
             android:layout_marginTop="50dp"
             android:backgroundTint="@color/cyan1"
-            android:text="Sign up"
+            android:text="Login"
             android:textSize="18sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
@@ -120,22 +103,22 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="270sp"
+            android:layout_width="240sp"
             android:layout_height="60sp"
             android:layout_gravity="center"
             android:gravity="center"
             android:padding="16dp"
-            android:text="Already have an account?"
+            android:text="Don't have an account?"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btnLogin2"
+            android:id="@+id/btnSignUp2"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:backgroundTint="@color/cyan1"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="Log in"/>
+            android:text="Sign up"/>
     </LinearLayout>
 
 </LinearLayout>
