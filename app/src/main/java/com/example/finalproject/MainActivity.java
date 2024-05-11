@@ -75,7 +75,10 @@ public class MainActivity extends AppCompatActivity {
             // Handle item click if needed
         });
 
-        // ImageButton to redirect to signup page
+        startSignUp();
+    }
+
+    public void startSignUp() {
         ImageButton signUpButton = findViewById(R.id.btnUser);
         signUpButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, SignUp.class);

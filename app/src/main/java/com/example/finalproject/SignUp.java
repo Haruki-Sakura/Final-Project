@@ -12,25 +12,35 @@ import retrofit2.Response;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.finalproject.api.ApiService;
+import com.example.finalproject.api.RegisterApi;
 import com.example.finalproject.api.ApiClient;
 import com.example.finalproject.model.User;
 
 public class SignUp extends AppCompatActivity {
 
-    private ApiService apiService;
+    private RegisterApi registerAPI;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
+        startLogin();
+        fetchRegister();
+
+    }
+
+    public void startLogin() {
         Button btnLogin2 = findViewById(R.id.btnLogin2);
         btnLogin2.setOnClickListener(v -> {
             Intent loginIntent = new Intent(SignUp.this, Login.class);
             startActivity(loginIntent);
         });
+    }
 
-        apiService = ApiClient.getApiService();
+    public void fetchRegister() {
+
+        registerAPI = ApiClient.getRegisterApi();
 
         Button btnSignUp = findViewById(R.id.btnSignUp1);
         EditText usernameEditText = findViewById(R.id.usernameHolder);
@@ -52,17 +62,14 @@ public class SignUp extends AppCompatActivity {
             User user = new User(username, password);
 
             // Call the register API
-            apiService.registerUser(user).enqueue(new Callback<Void>() {
+            registerAPI.registerUser(user).enqueue(new Callback<Void>() {
                 @Override
                 public void onResponse(Call<Void> call, Response<Void> response) {
                     if (response.isSuccessful()) {
                         Toast.makeText(SignUp.this, "User registered successfully", Toast.LENGTH_SHORT).show();
                         // Redirect to login page
-                        Intent loginIntent = new Intent(SignUp.this, Login.class);
-                        startActivity(loginIntent);
-                        finish();
+                        startLogin();
                     } else {
-
                         Toast.makeText(SignUp.this, "Failed to register user", Toast.LENGTH_SHORT).show();
                     }
                 }
