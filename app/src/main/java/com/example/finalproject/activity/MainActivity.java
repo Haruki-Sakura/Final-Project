@@ -1,4 +1,4 @@
-package com.example.finalproject;
+package com.example.finalproject.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.finalproject.R;
 
 import java.util.ArrayList;
 

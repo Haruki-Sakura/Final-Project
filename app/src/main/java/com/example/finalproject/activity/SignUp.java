@@ -1,4 +1,4 @@
-package com.example.finalproject;
+package com.example.finalproject.activity;
 
 
 import android.content.Intent;
@@ -12,6 +12,7 @@ import retrofit2.Response;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.finalproject.R;
 import com.example.finalproject.api.RegisterApi;
 import com.example.finalproject.api.ApiClient;
 import com.example.finalproject.model.User;

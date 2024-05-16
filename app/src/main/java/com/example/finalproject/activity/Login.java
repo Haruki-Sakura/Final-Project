@@ -1,17 +1,18 @@
-package com.example.finalproject;
+package com.example.finalproject.activity;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.Toast;
-import org.mindrot.jbcrypt.BCrypt;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.finalproject.R;
 import com.example.finalproject.api.LoginApi;
 import com.example.finalproject.model.User;
 import com.example.finalproject.api.ApiClient;
