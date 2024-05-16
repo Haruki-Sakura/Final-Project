@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Final Project"
+rootProject.name = "Adding to cart"
 include(":app")
  

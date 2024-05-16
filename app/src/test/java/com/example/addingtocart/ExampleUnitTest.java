@@ -1,4 +1,4 @@
-package com.example.finalproject;
+package com.example.addingtocart;
 
 import org.junit.Test;
 
